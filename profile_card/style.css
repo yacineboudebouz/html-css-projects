@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    height: 500px;
+    width: 500px;
+    border-radius: 10%;
+}
+
+.uplayer {
+    display: flex;
+    background: rgb(89, 89, 226);
+    justify-content: center;
+    height: 180px;
+    width: 500px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 6px 0px 4px rgba(0, 0, 0, 0.1);
+}
+
+.downlayer {
+    background: whitesmoke;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    box-shadow: inset;
+    height: 300px;
+    width: 500px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 6px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+    width: 150px;
+    z-index: 1;
+    height: 150px;
+    position: relative;
+    top: 50px;
+    border: solid rgb(89, 89, 226);
+    border-radius: 50%;
+}
+
+.image .profileimg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.downlayer h3 {
+    position: relative;
+    top: 20px;
+    display: block;
+    color: rgb(33, 33, 33);
+    font-weight: 650;
+    font-size: 25px;
+}
+
+.downlayer .profession {
+    position: relative;
+}
+
+.socialmedia {
+    display: inline-flex;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+.socialmedia div {
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 10px;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.socialmedia div:nth-child(1) {
+    background: rgb(66, 103, 178);
+}
+
+.socialmedia div:nth-child(2) {
+    background: rgb(234, 117, 136);
+}
+
+.socialmedia div:nth-child(3) {
+    background: rgb(51, 50, 50);
+}
+
+.socialmedia div:nth-child(4) {
+    background: rgb(29, 161, 242);
+}
+
+.socialmedia img {
+    position: relative;
+    top: 4px;
+    left: 0.7px;
+}
+
+.buttons {
+    margin-top: 10px;
+    display: block;
+}
+
+.buttons div {
+    display: inline-block;
+    margin: 0 5px;
+    background: rgb(89, 89, 226);
+    padding: 0px 20px;
+    height: 40px;
+    width: 80px;
+    border-radius: 25px;
+    transition: 1s;
+    text-align: center;
+}
+
+.buttons p {
+    color: white;
+    font-weight: bold;
+    position: relative;
+    bottom: 5px;
+}
+
+.buttons div:hover {
+    cursor: pointer;
+    background: rgb(26, 26, 92);
+}
+
+.reactions {
+    display: block;
+    margin-top: 20px;
+}
+
+.reactions div {
+    display: inline-block;
+    position: relative;
+    border-right: solid 1px;
+    height: 30px;
+}
+
+.reactions div p {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    bottom: 10px;
+}
+
+.reactions div img {
+    display: inline-block;
+    cursor: pointer;
+    margin: 4px;
+}
