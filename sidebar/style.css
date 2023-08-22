@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #1a313a;
+}
+
+.sidebar {
+    position: absolute;
+    width: 60px;
+    height: 100vh;
+    background: #fff;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.sidebar:hover {
+    width: 300px;
+}
+
+.sidebar ul {
+    position: relative;
+    height: 100vh;
+}
+
+.sidebar ul li {
+    list-style: none;
+}
+
+.sidebar ul li:hover {
+    background: #f3f3f3;
+    border-bottom: solid #1a313a 1px;
+    border-top: solid #1a313a 1px;
+}
+
+@keyframes borderDrawing {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.sidebar ul li a {
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.sidebar ul li a .icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+    color: #1a313a;
+}
+
+.sidebar ul li a .text {
+    position: relative;
+    height: 60px;
+    color: #1a313a;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.sidebar ul li.logo {
+    margin-bottom: 50px;
+}
+
+.sidebar ul li.logo .text {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
