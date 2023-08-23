@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vh;
+    position: absolute;
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text {
+    position: relative;
+    margin: 50px;
+    padding: 5px;
+}
+
+.title {
+    font-size: 35px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.text span {
+    position: absolute;
+    background-color: #000;
+    transition: .5s;
+}
+
+.horizontal.first {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+}
+
+.horizontal.second {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+}
+
+.vertical.first {
+    width: 5px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    translate: 0 1000px;
+}
+
+.vertical.second {
+    width: 5px;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    translate: 0 -1000px;
+}
+
+.text:hover .horizontal.first {
+    transform: translateX(1000px);
+}
+
+.text:hover .horizontal.second {
+    transform: translateX(-1000px);
+}
+
+.text:hover .vertical.first {
+    transform: translateY(-1000px);
+}
+
+.text:hover .vertical.second {
+    transform: translateY(1000px);
+}
+
+.text2 {
+    position: relative;
+    margin: 50px;
+    padding: 5px;
+}
+
+.title2 {
+    font-size: 35px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.text2 span {
+    position: absolute;
+    background-color: #000;
+    transition: .5s;
+}
+
+.horizontal.first2 {
+    top: 0;
+    right: 0;
+    height: 5px;
+    width: 0px;
+}
+
+.horizontal.second2 {
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 0px;
+}
+
+.text2:hover .horizontal {
+    width: 100%;
+}
