@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dad3f8;
+}
+
+.container {
+    max-width: 950px;
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 20px;
+    background: #fff;
+    padding: 40px 50px 40px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container .main-title {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.container .content .list {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 20%;
+    margin-right: 50px;
+}
+
+.container .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .list label {
+    height: 60px;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 12px;
+    cursor: pointer;
+    line-height: 60px;
+    padding-left: 25px;
+    color: #333;
+    z-index: 12;
+    transition: all 0.4s ease;
+}
+
+#home:checked~.list .home,
+#blog:checked~.list .blog,
+#help:checked~.list .help,
+#code:checked~.list .code,
+#about:checked~.list .about {
+    color: #fff;
+}
+
+.container .indicator {
+    position: absolute;
+    height: 60px;
+    transition: 0.5s;
+    top: 0;
+    width: 100%;
+    left: 0;
+    background: #6d50e2;
+    border-radius: 12px;
+}
+
+.container input[type="radio"] {
+    display: none;
+}
+
+#home:checked~.indicator {
+    top: 0;
+}
+
+#blog:checked~.list .indicator {
+    top: 60px;
+}
+
+#help:checked~.list .indicator {
+    top: 120px;
+}
+
+#code:checked~.list .indicator {
+    top: 180px;
+}
+
+#about:checked~.list .indicator {
+    top: 240px;
+}
+
+.container .content .text-content {
+    width: 80%;
+    height: 100%;
+}
+
+.content .text-content .title {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#home:checked~.text-content .home,
+#blog:checked~.text-content .blog,
+#help:checked~.text-content .help,
+#code:checked~.text-content .code,
+#about:checked~.text-content .about {
+    display: block;
+    animation: animate 1s;
+}
+
+.content .text-content {
+    text-align: justify;
+    transition: 0.5s;
+}
+
+.content .text-content .text {
+    display: none;
+    transition: 0.5s;
+}
+
+@keyframes animate {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
